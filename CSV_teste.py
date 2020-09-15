@@ -1,11 +1,15 @@
 import csv
 
 
-with open('Teste.csv', 'w' , newline= '') as file:
+row_list = [["SN", "Name", "Contribution"],
+             [1, "Lis Torvalds", "Linux Kernel"],
+             [2, "Tim Berners-Lee", "World Wide Web"],
+             [3, "Guido van Rossum", "Python Programming"]]
+
+
+cars = [["Ford"], ["Volvo"], ["BMW"]]
+
+with open('Test.csv', 'w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(["SN", "Name", "Contribution"])
-    writer.writerow([1, "Linus Torvalds", "Linux Kernel"])
-    writer.writerow([2, "Tim Berners-Lee", "World Wide Web"])
-    writer.writerow([3, "Guido van Rossum", "Python Programming"])
-    writer.writerow([4, "andre", "Python Programming"] )
+    writer.writerows(cars)
 
